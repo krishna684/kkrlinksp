@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		.home-intro {
+  background-image: url("https://unsplash.imgix.net/photo-1428278953961-a8bc45e05f72?fit=crop&amp;fm=jpg&amp;h=500&amp;q=75&amp;w=1050");
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  height: 100%;
+  color: $white;
+  text-align: center;
+}
+body, html{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+	</style>
+</head>
+<body>
+<div class="home-intro"></div>
+<script type="text/javascript">
+	function randomImage(){
+  var images = [
+   'https://download.unsplash.com/photo-1430916273432-273c2db881a0',
+   'https://download.unsplash.com/photo-1428278953961-a8bc45e05f72',
+   'https://download.unsplash.com/photo-1429277005502-eed8e872fe52'];
+  var size = images.length;
+  var x = Math.floor(size * Math.random());
+  console.log(x);
+  var element = document.getElementsByClassName('home-intro');
+  console.log(element);
+  element[0].style["background-image"] = "url("+ images[x] + ")";
+}
+
+document.addEventListener("DOMContentLoaded", randomImage);
+</script>
+</body>
+</html>
